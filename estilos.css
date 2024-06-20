@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial;
+    font-size: 1.2rem;
+    min-height: 100vh;/* Ocupe el 100% del navegadoe*/
+    padding: 20px;
+
+    display: grid;
+    gap: 15px;
+    grid-template-columns: 100px auto 300px;/* CRear las columnas de grid*/
+    grid-template-rows: 50px auto 200px;
+}
+
+
+.encabezado{
+    
+    background-color: slateblue;
+
+    grid-column: 1/4;/*Desde  la linea 1 hasta la liena 4 en columna*/
+    
+}
+.navegacion{
+    
+    background-color: tomato;
+    grid-column: 1/2;
+    grid-row: 2/4;/*Desde la linea 2 hasta las 4 en fila*/
+   
+}
+   
+.sidebar{
+   
+    background-color: salmon;
+    grid-column: 1/4;
+}
+
+.principal{
+
+    background-color: teal;
+
+    grid-column: 2/4;
+    grid-row: 2/4;
+}
+.footer{
+
+    background-color: aqua;
+    grid-column: 1/4;
+}
+
+.mod{
+    box-shadow: 10px 6px 37px -13px rgba(8, 8, 8, 0.74);
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    font-weight: 500;
+}

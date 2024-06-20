@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial;
+    font-size: 1.2rem;
+    min-height: 100vh;/* Ocupe el 100% del navegadoe*/
+    padding: 20px;
+
+    display: grid;
+    gap: 15px;
+
+    grid-template: 
+    "encabezado" 100px
+    "navegacion" 50px
+    "principal" auto
+    "sidebar" 50px
+    "footer" 50px
+    ;
+    
+}
+
+
+.encabezado{
+    
+    background-color: slateblue;
+    grid-area: encabezado;
+    
+    
+}
+.navegacion{
+    
+    background-color: tomato;
+    grid-area: navegacion;
+   
+}
+   
+.sidebar{
+   
+    background-color: salmon;
+    grid-area: sidebar;
+}
+
+.principal{
+
+    background-color: teal;
+    grid-area: principal;
+    
+}
+.footer{
+
+    background-color: aqua;
+    grid-area: footer;
+    
+}
+
+.mod{
+    box-shadow: 10px 6px 37px -13px rgba(8, 8, 8, 0.74);
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    font-weight: 500;
+}
+
+/* Siempre hata abajo de tu codigo pondras las mediaquerys */
+@media (min-width:768px){
+    body{
+        grid-template: 
+        "encabezado navegacion" 50px
+        "encabezado navegacion" 50px
+        "sidebar principal" auto
+        "footer footer" 100px/
+        200px auto
+        
+    ;
+    }
+}
+
+@media (min-width:992px) {
+    body{
+        grid-template: 
+            "encabezado encabezado encabezado" 100px
+            "navegacion principal sidebar" auto
+            "footer footer footer" 100px/
+            200px auto 200px;
+    }
+
+    .navegacion{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+}
